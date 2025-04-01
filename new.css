@@ -107,7 +107,9 @@ body {
 }
 
 .popular-section {
-    padding: 50px;
+    /* padding: 50px; */
+    
+
     text-align: center;
 }
 
@@ -120,8 +122,9 @@ body {
 
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: auto auto auto;  
+    gap: 20px; 
+    justify-content: space-evenly; 
 }
 
 .anime-card {
