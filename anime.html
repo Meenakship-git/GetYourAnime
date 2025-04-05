@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Need Any Anime Recommendation?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #121212, #000000);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background-color: #1c1c1c;
+      border-bottom: 2px solid #ff4081;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .navbar h2 {
+      color: #ff4081;
+      font-size: 1.8rem;
+    }
+
+    .search-bar input {
+      width: 280px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: 2px solid #ff4081;
+      outline: none;
+      font-size: 1rem;
+      background-color: #1c1c1c;
+      color: white;
+    }
+
+    .search-bar input:focus {
+      box-shadow: 0 0 10px #ff4081;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .header {
+      text-align: center;
+      padding: 100px 30px;
+      background: #000000;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      color: #ff4081;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+
+    .section {
+      padding: 60px 80px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff4081;
+      margin-bottom: 40px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .card {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(255, 64, 129, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 64, 129, 0.6);
+    }
+
+    .card h3 {
+      margin: 15px 0;
+      color: #fff;
+    }
+
+    .card p {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h2>Anime Finder</h2>
+    <div class="search-bar">
+      <input type="text" placeholder="Search anime...">
+    </div>
+  </div>
+
+  <div class="header">
+    <h1>Need Any Anime Recommendation?</h1>
+    <p>Explore genres, discover top picks and hidden gems</p>
+  </div>
+
+  <div class="section">
+    <h2>Trending Anime</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Anime Title 1</h3>
+        <p>Description goes here...</p>
+      </div>
+      <div class="card">
+        <h3>Anime Title 2</h3>
+        <p>Description goes here...</p>
+      </div>
+      <div class="card">
+        <h3>Anime Title 3</h3>
+        <p>Description goes here...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Discover by Genre</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Action</h3>
+        <p>Fast-paced and exciting anime with battles and missions.</p>
+      </div>
+      <div class="card">
+        <h3>Romance</h3>
+        <p>Love stories with drama, tension and warm feelings.</p>
+      </div>
+      <div class="card">
+        <h3>Comedy</h3>
+        <p>Funny anime to make you laugh out loud.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Anime Finder. All rights reserved.
+  </div>
+</body>
+</html>
