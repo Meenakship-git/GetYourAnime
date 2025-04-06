@@ -1,0 +1,89 @@
+body {
+    
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+.navbar {
+  background-color: #1a1a2e;
+  padding: 40px 30px; /* reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e91e63;
+}
+
+.navbar h1 {
+  color: #e91e63;
+  font-size: 30px; /* smaller font size */
+  margin: 0;
+}
+
+.content-wrapper {
+  margin-top: 90px; /* Pushes entire main content down */
+}
+
+
+
+.navbar a {
+  color: #fff;
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+.banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  background-size: 700px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.banner-content h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.btn {
+  padding: 20px 30px;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-outline {
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #e91e63;
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
