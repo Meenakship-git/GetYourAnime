@@ -31,6 +31,11 @@
     </div>
 
     <script>
+       
+  const baseURL = location.hostname === "localhost"
+    ? "http://localhost:5000"
+    : "https://your-backend-url.onrender.com"; // Replace with your real backend URL
+
         async function fetchAndDisplay(sectionId, endpoint, cardClass) {
             const res = await fetch(`http://localhost:5000${endpoint}`);
             const data = await res.json();
