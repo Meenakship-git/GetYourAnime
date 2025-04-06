@@ -32,8 +32,13 @@
 
     <script>
 
+        const baseURL = location.hostname === "localhost"
+  ? "http://localhost:5000"
+  : "https://getyouranime.onrender.com/"; // replace with your real URL
+
+
         async function fetchAndDisplay(sectionId, endpoint, cardClass) {
-            const res = await fetch(`http://localhost:5000${endpoint}`);
+            const res = await fetch(`${baseURL}${endpoint}`);
             const data = await res.json();
             const container = document.getElementById(sectionId);
             container.innerHTML = '';
@@ -63,7 +68,7 @@
             const container = document.getElementById('randomAnime');
             container.innerHTML = '';
             for (let i = 0; i < 6; i++) {
-                const res = await fetch('http://localhost:5000/random');
+                const res = await fetch('fetch(`${baseURL}/random`);
                 const data = await res.json();
                 const anime = data.data;
 
