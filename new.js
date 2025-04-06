@@ -1,4 +1,5 @@
-const baseURL = "http://localhost:5000";
+const baseURL = "https://getyouranime.onrender.com";
+//const baseURL = "http://localhost:5000";
 
 async function fetchAnime(url, containerSelector) {
   try {

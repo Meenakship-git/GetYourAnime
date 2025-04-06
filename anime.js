@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch(`http://localhost:5000/anime/${animeId}`);
+    const baseURL = "https://getyouranime.onrender.com";
+
+    const response = await fetch(`${baseURL}/anime/${animeId}`);
+    //const response = await fetch(`http://localhost:5000/anime/${animeId}`);
     const data = await response.json();
     const anime = data.data;
 

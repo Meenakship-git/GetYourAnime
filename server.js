@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const fetch = require('node-fetch');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;;
 const cors = require('cors');
 
 app.use(cors());
@@ -127,6 +127,5 @@ app.get("/anime/:id", async (req, res) => {
 
 // Start the Server
 app.listen(PORT, () => {
-  console.log(`Server running! Get anime data here: http://localhost:5000/anime`);
-  console.log(`Search anime here: http://localhost:5000/search?q=naruto`);
+  console.log(`Server running on port ${PORT}`);
 });
