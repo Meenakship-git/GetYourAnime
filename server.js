@@ -15,12 +15,14 @@ app.get("/", (req, res) => {
 // Fetch Top Anime from Jikan API
 app.get("/anime", async (req, res) => {
   try {
-    const response = await axios.get("https://api.jikan.moe/v4/top/anime");
+    const response = await axios.get("https://api.allorigins.win/raw?url=https://api.jikan.moe/v4/top/anime");
     res.json(response.data);
   } catch (error) {
-    res.status(500).send("Error fetching anime data");
+    console.error("Proxy fetch error:", error.message);
+    res.status(500).send("Error fetching anime data via proxy");
   }
 });
+
 
 app.get("/trending", async (req, res) => {
   try {
@@ -58,7 +60,7 @@ app.get("/genre", async (req, res) => {
 //  Fetch a Random Anime
 app.get("/random", async (req, res) => {
   try {
-    const response = await axios.get("https://api.jikan.moe/v4/random/anime");
+    const response = await axios.get("https://api.allorigins.win/raw?url=https://api.jikan.moe/v4/top/anime");
     res.json(response.data);
   } catch (error) {
     res.status(500).send("Error fetching random anime");
