@@ -1,5 +1,4 @@
 const baseURL = "https://getyouranime.onrender.com";
-//const baseURL = "http://localhost:5000";
 
 async function fetchAnime(url, containerSelector) {
   try {
@@ -15,7 +14,6 @@ async function fetchAnime(url, containerSelector) {
       div.style.backgroundImage = `url('${anime.images.jpg.large_image_url}')`;
       div.innerHTML = `<div class="anime-title">${anime.title}</div>`;
 
-      // Link to anime detail page
       div.onclick = () => {
         window.location.href = `anime-detail.html?id=${anime.mal_id}`;
       };
@@ -27,10 +25,8 @@ async function fetchAnime(url, containerSelector) {
   }
 }
 
+// Load Top Anime
+fetchAnime(`${baseURL}/anime`, "#popularAnime");
 
-  
-
-// Load Top, Trending, and Random
-fetchAnime(`${baseURL}/anime`, ".anime-grid");
-//fetchAnime(`${baseURL}/trending`, ".anime-box1");
-fetchAnime(`${baseURL}/random`, ".anime-box2");
+// Load Random Anime
+fetchAnime(`${baseURL}/random`, "#randomAnime");
