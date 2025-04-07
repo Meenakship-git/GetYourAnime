@@ -1,9 +1,10 @@
-app.use(express.static("public"));
+
 const express = require("express");
 const axios = require("axios");
 const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.use(express.static("public"));
 const cors = require('cors');
 
 app.use(cors());
